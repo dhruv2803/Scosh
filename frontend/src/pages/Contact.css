@@ -1,0 +1,132 @@
+.contact {
+    background: #f1ece6;
+    height: fit-content;
+    padding: 75px 0px;
+}
+.contact_heading {
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 64px;
+    line-height: 77px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    margin: 30px 0px;
+
+    color: #06053a;
+}
+.contact_subheading {
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+    letter-spacing: 0.005em;
+    color: #06053a;
+    margin: 20px 0px;
+}
+.contact_form {
+    width: 770px;
+    position: relative;
+    margin: 0px auto;
+}
+.contact_form > input,
+textarea {
+    width: 100%;
+    height: 75px;
+    margin-bottom: 25px;
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.005em;
+    color: #06053a;
+    border: 1px solid #06053a;
+    box-sizing: border-box;
+    background-color: #f1ece6;
+    padding: 10px 20px;
+}
+.contact_form > textarea {
+    height: 150px;
+}
+.contact_button {
+    width: 227px;
+    height: 72px;
+    position: relative;
+    display: block;
+    margin: auto;
+    background: #06053a;
+    box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.5);
+    border-radius: 40px;
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: 0.005em;
+
+    color: #ffffff;
+}
+.contact_form > input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    color: #06053a;
+    font-weight: 200;
+}
+.contact_form > input:-moz-placeholder,
+textarea:-moz-placeholder {
+    color: #06053a;
+    font-weight: 200;
+}
+.contact_form > input ::content {
+    color: #06053a;
+    font-weight: 200;
+}
+.contact_otherMethod {
+    width: 100%;
+    display: block;
+    margin-top: 100px;
+}
+.contact_otherMethod > p {
+    text-align: center;
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    margin: auto;
+}
+.contact_otherMethod > p > img {
+    margin-top: 2px;
+    position: relative;
+    top: 10px;
+}
+
+@media (max-width: 992px) {
+    .contact_heading {
+        font-size: 50px;
+    }
+    .contact_form {
+        width: 700px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .contact_heading {
+        font-size: 45px;
+    }
+    .contact_form {
+        width: 600px;
+    }
+}
+@media (max-width: 576px) {
+    .contact_heading {
+        font-size: 40px;
+    }
+    .contact_form {
+        width: 90vw;
+    }
+}

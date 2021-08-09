@@ -1,0 +1,67 @@
+.Details {
+    /* width: 100vw; */
+    height: fit-content;
+    background-color: #fbfef9;
+    padding: 50px;
+    padding-left: 0px;
+    padding-right: 0px;
+    /* padding-bottom: 500px; */
+    border-bottom: 4px solid #06053a;
+}
+.Details_image {
+    display: block;
+    position: relative;
+    width: 350px;
+    height: 239.35px;
+    margin: 100px auto 50px auto;
+}
+.Details_heading {
+    font-family: "Exo 2", sans-serif;
+    font-family: Exo 2;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 120px;
+    text-align: center;
+    color: #06053a;
+}
+.Details_description {
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #000000;
+}
+/* // Small devices (landscape phones, 576px and up) */
+@media (max-width: 992px) {
+    .Details_heading {
+        font-size: 100px;
+    }
+    .Details_description {
+        font-size: 22px;
+    }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .Details_heading {
+        font-size: 80px;
+    }
+    .Details_description {
+        font-size: 20px;
+    }
+}
+@media (max-width: 576px) {
+    .Details_heading {
+        font-size: 60px;
+    }
+    .Details_description {
+        font-size: 18px;
+    }
+}
+
+/* // Large devices (desktops, 992px and up) */
+
+/* // Extra large devices (large desktops, 1200px and up) */
