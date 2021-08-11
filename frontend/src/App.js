@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+<<<<<<< HEAD
 import Contact from "./pages/Contact";
 import Events from "./pages/Events/Events";
 import Workshops from "./pages/Workshops/Workshops";
@@ -18,6 +19,10 @@ const App = () => {
             <BlogPage />
         </div>
     );
+=======
+const App = () => {
+    return <div></div>;
+>>>>>>> 0fe11ddd7b184c40983f2d4a08b5594779c2f8b5
 };
 
 export default App;
