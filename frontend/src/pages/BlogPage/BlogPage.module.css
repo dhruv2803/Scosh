@@ -1,0 +1,75 @@
+.root {
+    min-height: 100vh;
+    background-color: #E5E5E5;
+    padding-top: 10rem;
+    color: #06053A;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    display: flex;
+    margin: auto 10rem;
+    min-height: 80vh;
+}
+
+.main {
+    flex: 1;
+    padding: 0 2rem;
+    border-right: 2px solid #C4C4C4;
+}
+
+.main > h1 {
+    font-size: 48px;
+    font-family: 'Exo 2', sans-serif;
+    font-weight: bold;
+}
+
+.main > h6 {
+    font-size: 24px;
+}
+
+.main > img {
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    padding: 1rem 0;
+}
+
+.sidepanel {
+    margin-left: 2rem;
+    width: 20vw;   
+}
+
+.sideCard {
+    margin-bottom: 2rem;
+}
+
+.sideCard > img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 1rem;
+}
+
+.sideCard > h1 {
+    font-family: "Exo 2", sans-serif;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        margin: auto;
+    }
+
+    .sidepanel {
+        margin-top: 4rem;
+    }
+
+    .main {
+        padding-bottom: 2rem;
+        border-right: none;
+        border-bottom: 2px solid #C4C4C4;
+    }
+}
