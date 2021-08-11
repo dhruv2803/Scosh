@@ -1,6 +1,6 @@
 import React from "react";
 import "./Details.css";
-import aboutUs from "../images/about_us.svg";
+// import aboutUs from "../images/about_us.svg";
 const Details = ({ image, alter, heading, description }) => {
     return (
         <div className="Details">
