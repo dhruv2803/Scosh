@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
-import { ReactComponent as Artboard } from './Artboard.svg';
-import { ReactComponent as Astronaut } from './astronaut.svg';
+import { ReactComponent as Artboard } from '../images/Artboard.svg';
+import { ReactComponent as Astronaut } from '../images/astronaut.svg';
 import anime from 'animejs/lib/anime.es.js';
 import './path.css';
 
