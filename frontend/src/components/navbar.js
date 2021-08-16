@@ -58,7 +58,7 @@ function Navbar() {
             {/* Scosh's logo is not included */}
             
             <div className="container-fluid px-md-5 px-3">
-                <Link to="/" className="fw-normal navbar-brand ps-md-5"><span className="nav-brand">Harshil Bhanushali</span></Link>
+                <Link to="/" className="fw-normal navbar-brand ps-md-5"><span className="nav-brand">SCOSH - SVNIT</span></Link>
                 <Link to="/contactpage" className="ms-auto">
                     <button className="btn btn-outline-info text-info">Contact Me</button>
                 </Link>
