@@ -1,7 +1,7 @@
 import React, { Component, useEffect } from 'react';
 import anime from 'animejs/lib/anime.es.js';
 import './starsspace.css';
-import { ReactComponent as Artboard } from './Artboard.svg';
+import { ReactComponent as Artboard } from '../images/Artboard.svg';
 import Background from './background';
 
 export default class Space extends React.Component {
