@@ -24,6 +24,7 @@ const Contact = () => {
                     placeholder="Email*"
                 />
                 <textarea
+                    className="msg"
                     placeholder="Your Message..."
                     name="msg"
                     id="msg"

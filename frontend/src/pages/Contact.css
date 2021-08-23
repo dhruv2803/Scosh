@@ -32,7 +32,7 @@
     margin: 0px auto;
 }
 .contact_form > input,
-textarea {
+.msg {
     width: 100%;
     height: 75px;
     margin-bottom: 25px;
