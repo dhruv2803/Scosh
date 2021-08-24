@@ -4,6 +4,9 @@ import aboutUs from "../images/about_us.svg";
 import ourVision from "../images/our_vision.svg";
 import ourMission from "../images/our_mission.svg";
 import svnitLogo from "../images/svnit.svg";
+import Space from "../components/space_background";
+import Blogdetail from "../components/Blogdetail/Blogdetail";
+import Eventdetail from "../components/Eventdetail/Eventdetail";
 const ScoshDetails = () => {
     const aboutus = {
         alter: "about us",
@@ -30,6 +33,9 @@ const ScoshDetails = () => {
     };
     return (
         <div>
+            <Space />
+            <Blogdetail />
+            <Eventdetail />
             <Details
                 image={aboutUs}
                 alter={aboutus.alter}
