@@ -1,8 +1,23 @@
-import React from "react";
-import { Container } from "react-bootstrap";
+import React, {useState, useEffect} from "react";
+import { Container, Spinner } from "react-bootstrap";
 import Card from "../Card";
 import "./Eventdetail.css";
+import axios from "axios";
+import constants from "../../constants.json";
+
 const Eventdetail = () => {
+    const [blogData, setBlogData] = useState([])
+    const [loading, setLoading] = useState(true)
+
+    useEffect(() => {
+        axios
+            .get(constants.baseURL + "/events/recent")
+            .then((res) => setBlogData(res.data))
+            .then((_) => console.log(blogData))
+            .then(_=> setLoading(false))
+            .catch((err) => console.error(err));
+    }, []);
+
     let carddetails = [
         {
             title: "Title",
@@ -14,20 +29,23 @@ const Eventdetail = () => {
     return (
         <div className="eventdetail">
             <Container>
-                <div className="eventdetail_header">BLOGS</div>
+                <div className="eventdetail_header">EVENTS</div>
+                {loading ? (<div>
+                    <Spinner animation="border" style={{color: "white"}} />
+                </div>) : (<div>
                 <div className="eventdetail_cardContainer">
                     <div className="eventdetail_cards">
                         <Card
                             size={carddetails[0].size}
                             clr={carddetails[0].clr}
-                            title={carddetails[0].title}
+                            title={blogData[0] ? blogData[0].title : carddetails[0].title}
                             body={carddetails[0].body}
                             image="https://picsum.photos/200"
                         />
                         <Card
                             size={carddetails[0].size}
                             clr="yellow"
-                            title={carddetails[0].title}
+                            title={blogData[1] ? blogData[1].title : carddetails[0].title}
                             body={carddetails[0].body}
                             image="https://picsum.photos/200"
                         />
@@ -36,19 +54,20 @@ const Eventdetail = () => {
                         <Card
                             size={carddetails[0].size}
                             clr={carddetails[0].clr}
-                            title={carddetails[0].title}
+                            title={blogData[2] ? blogData[2].title : carddetails[0].title}
                             body={carddetails[0].body}
                             image="https://picsum.photos/200"
                         />
                         <Card
                             size={carddetails[0].size}
                             clr="yellow"
-                            title={carddetails[0].title}
+                            title={blogData[3] ? blogData[3].title : carddetails[0].title}
                             body={carddetails[0].body}
                             image="https://picsum.photos/200"
                         />
                     </div>
                 </div>
+                </div>)}
             </Container>
         </div>
     );
