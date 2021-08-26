@@ -27,8 +27,9 @@ export default function Workshops() {
                     {workshops.map((workshop) => (
                         <EventCard
                             title={workshop.name}
-                            body={workshop.body}
-                            img={workshop.img}
+                            body={workshop.description}
+                            img={workshop.image}
+                            registerLink={workshop.register}
                         />
                     ))}
                 </div>

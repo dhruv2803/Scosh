@@ -27,8 +27,9 @@ export default function Events() {
                     {events.map((event) => (
                         <EventCard
                             title={event.name}
-                            body={event.body}
-                            img={event.img}
+                            body={event.description}
+                            img={event.image}
+                            registerLink={event.register}
                         />
                     ))}
                 </div>

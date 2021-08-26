@@ -2,7 +2,7 @@ import React from "react";
 import EventCardCSS from "./EventCard.module.css";
 
 export default function EventCard(props) {
-    const { title, body, img } = props;
+    const { title, body, img, registerLink } = props;
     return (
         <div className={EventCardCSS.root}>
             <div className={EventCardCSS.card}>
@@ -18,11 +18,13 @@ export default function EventCard(props) {
                         </p>
                     </div>
                     <div className={EventCardCSS.actions}>
-                        <button className={EventCardCSS.registerBtn}>
+                        <button
+                            className={EventCardCSS.registerBtn}
+                            onClick={() =>
+                                (window.location.href = registerLink)
+                            }
+                        >
                             Register
-                        </button>
-                        <button className={EventCardCSS.moreBtn}>
-                            Learn More
                         </button>
                     </div>
                 </div>
