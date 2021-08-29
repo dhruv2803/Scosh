@@ -16,14 +16,14 @@ function Navbar() {
         if (location.pathname == "/") {
             //when using hashrouter location.hash can be used
             nav.classList.remove("navbar-bg");
-            navbarbrand[0].classList.add("text-dark");
+            navbarbrand[0].classList.add("text-white");
             {
                 for (let i = 0; i < 5; i++) {
-                    navlinks[i].classList.add("text-dark");
+                    navlinks[i].classList.add("text-white");
                 }
             }
             gsap.to(".navbar", {
-                backgroundColor: "white",
+                backgroundColor: "#06053A",
                 duration: 0,
                 ease: "none",
                 scrollTrigger: {
