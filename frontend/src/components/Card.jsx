@@ -23,7 +23,7 @@ const Card = ({ eventLink, blogId, size, clr, image, title, body }) => {
             </div>
             <div className="card_details">
                 <h3 className="card_title">{title}</h3>
-                <p className="card_description">{body}</p>
+                <p className="card_description">{body.substring(0, 100)}</p>
             </div>
         </div>
     );
