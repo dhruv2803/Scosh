@@ -46,6 +46,14 @@
     padding: 4px 8px;
 }
 
+.imgClass {
+    width: 400px;
+    height: 400px;
+    max-width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
 @media (max-width: 768px) {
     .root {
         min-height: 580px;
