@@ -1,6 +1,6 @@
 import React from "react";
 import EventsCSS from "./Events.module.css";
-import { Container } from "react-bootstrap";
+import { Container, Spinner } from "react-bootstrap";
 import EventCard from "../../components/EventCard/EventCard";
 import axios from "axios";
 import constants from "../../constants.json";
@@ -18,21 +18,41 @@ export default function Events() {
             .then((res) => setEvents(res.data))
             .catch((err) => console.error(err));
     }, []);
-
+    useEffect(() => {
+        if (events.length !== 0) {
+            setLoading(false);
+        }
+    }, [events]);
     return (
         <div className={EventsCSS.root}>
             <Container>
                 <div className={EventsCSS.header}>EVENTS</div>
-                <div className={EventsCSS.cardContainer}>
-                    {events.map((event) => (
-                        <EventCard
-                            title={event.name}
-                            body={event.description}
-                            img={event.image}
-                            registerLink={event.register}
+
+                {loading ? (
+                    <div
+                        style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                        }}
+                    >
+                        <Spinner
+                            animation="border"
+                            style={{ color: "white" }}
                         />
-                    ))}
-                </div>
+                    </div>
+                ) : (
+                    <div className={EventsCSS.cardContainer}>
+                        {events.map((event) => (
+                            <EventCard
+                                title={event.name}
+                                body={event.description}
+                                img={event.image}
+                                registerLink={event.register}
+                            />
+                        ))}
+                    </div>
+                )}
             </Container>
         </div>
     );
