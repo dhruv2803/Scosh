@@ -108,7 +108,12 @@ export default function Background() {
         });
     });
     return (
-        <div className="Landing-SVG container-fluid">
+        <div
+            className="Landing-SVG container-fluid"
+            style={{
+                overflowX: "hidden",
+            }}
+        >
             <Artboard className="main-svg" />
             <Astronaut className="astronaut1" />
             <div className="svg-paths">
