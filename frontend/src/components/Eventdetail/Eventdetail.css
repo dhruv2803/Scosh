@@ -2,6 +2,7 @@
     background-color: #06053a;
     min-height: 100vh;
     font-family: "Exo 2", sans-serif;
+    padding-bottom: 200px;
 }
 .eventdetail_header {
     display: flex;
