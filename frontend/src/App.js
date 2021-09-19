@@ -11,6 +11,7 @@ import Navbar from "./components/navbar";
 import Blogs from "./pages/Blogs/Blogs";
 import BlogPage from "./pages/BlogPage/BlogPage";
 import Footer from "./components/footer";
+import Teams from "./pages/teams/Teams";
 
 const App = () => {
     return (
@@ -30,6 +31,9 @@ const App = () => {
             </Route>
             <Route path="/blogs" exact={true}>
                 <Blogs />
+            </Route>
+            <Route path="/teamspage" exact={true}>
+                <Teams />
             </Route>
             <Route path="/blog/:id" exact={true}>
                 <BlogPage />
