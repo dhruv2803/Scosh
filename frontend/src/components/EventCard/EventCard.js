@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import EventCardCSS from "./EventCard.module.css";
 
 export default function EventCard(props) {
     const { title, body, img, registerLink } = props;
+    const [read, setRead] = useState(false);
     return (
         <div className={EventCardCSS.root}>
             <div className={EventCardCSS.card}>
@@ -14,11 +15,13 @@ export default function EventCard(props) {
                 <div className={EventCardCSS.cardContent}>
                     <div>
                         <h1>{title ?? "Title"}</h1>
-                        <p>
-                            {body ??
-                                "Lorem ipsum dolor sit amet consectetur, adipisicing \
-                            elit. Ratione laborum quas delectus sequi? Debitis \
-                            accusantium, ut rerum accusamus cumque laboriosam."}
+                        <p
+                            onClick={() => {
+                                setRead(!read);
+                            }}
+                        >
+                            {read ? body : body.slice(0, 200)}
+                            {read ? <u>Read less...</u> : <u>Read more...</u>}
                         </p>
                     </div>
                     <div className={EventCardCSS.actions}>
