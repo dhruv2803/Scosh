@@ -35,7 +35,10 @@ export default function BlogPage() {
                             }
                             alt="error"
                         />
-                        <p id="content">{data.content}</p>
+                        {/* <p id="content">{data.content}</p> */}
+                        <div
+                            dangerouslySetInnerHTML={{ __html: data.content }}
+                        />
                     </div>
                 )}
                 {/* <div className={BlogPageCSS.sidepanel}>

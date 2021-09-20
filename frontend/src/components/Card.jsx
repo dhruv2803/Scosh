@@ -34,7 +34,10 @@ const Card = ({ eventLink, blogId, size, clr, image, title, body }) => {
                 <h3 className="card_title">
                     <b>{title}</b>
                 </h3>
-                <p className="card_description">{body.substring(0, 100)}</p>
+                {/* <p className="card_description">{body.substring(0, 100)}</p> */}
+                <div
+                            dangerouslySetInnerHTML={{ __html: body.substring(0, 100) }}
+                        />
             </div>
         </div>
     );
