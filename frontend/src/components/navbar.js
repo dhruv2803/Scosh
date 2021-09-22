@@ -44,15 +44,13 @@ function Navbar() {
         }
     }, [location]);
 
-    useEffect(() => {
-        var hamburger = document.querySelector(".hamburger");
-        hamburger.addEventListener("click", function () {
+    function Hamclick() {
+            var hamburger = document.querySelector('.hamburger');
+            var navmenu = document.querySelector('.navbarmenu');
             hamburger.classList.toggle("is-active");
-            let navmenu = document.getElementById("collapseNav");
             navmenu.classList.toggle("collapse");
-        });
-    });
-
+    };
+    
     return (
         <nav
             className="navbar position-sticky top-0 start-0 py-3 navbar-expand-lg"
@@ -73,6 +71,7 @@ function Navbar() {
                     className="hamburger hamburger--collapse navbar-toggler mx-2"
                     type="button"
                     data-bs-target="#collapseNav"
+                    onClick={Hamclick}
                 >
                     <span className="hamburger-box">
                         <span className="hamburger-inner"></span>
