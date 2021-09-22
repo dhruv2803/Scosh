@@ -3,8 +3,8 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Teamcard from "./Teamcard";
-const TeamCarousal = ({ heading, details }) => {
-    // console.log(props);
+const TeamCarousal = ({ heading, det }) => {
+    // console.log({ heading, details });
     var settings = {
         dots: true,
         infinite: false,
@@ -41,16 +41,16 @@ const TeamCarousal = ({ heading, details }) => {
     };
     return (
         <div style={{ paddingBottom: "50px" }}>
-            <div className="carousel_heading"> {heading} </div>
             <Slider {...settings}>
-                {details.map((detail) => (
+                {det?.map((detail) => (
                     <div>
+                        {/* {console.log(detail)} */}
                         <Teamcard
                             name={detail.name}
                             image={detail.image}
                             designation={detail.designation}
                             socialfacbook={detail.socialfacbook}
-                            socialtwitter={detail.socialtwitter}
+                            socialemail={detail.socialemail}
                             sociallinkedin={detail.sociallinkedin}
                             socialinsta={detail.socialinsta}
                         />

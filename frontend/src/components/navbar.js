@@ -2,8 +2,9 @@ import React, { useEffect } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import scosh from "../images/scosh.svg";
 import "./hamburger.css";
-import Scoshlogo from "../images/scosh.svg";
+
 gsap.registerPlugin(ScrollTrigger);
 
 function Navbar() {
@@ -35,6 +36,7 @@ function Navbar() {
             });
         } else {
             nav.classList.add("navbar-bg");
+            console.log(location.pathname);
             navbarbrand[0].classList.add("text-white");
             {
                 for (let i = 0; i < 5; i++) {
@@ -45,28 +47,23 @@ function Navbar() {
     }, [location]);
 
     function Hamclick() {
-            var hamburger = document.querySelector('.hamburger');
-            var navmenu = document.querySelector('.navbarmenu');
-            hamburger.classList.toggle("is-active");
-            navmenu.classList.toggle("collapse");
-    };
-    
+        var hamburger = document.querySelector(".hamburger");
+        var navmenu = document.querySelector(".navbarmenu");
+        hamburger.classList.toggle("is-active");
+        navmenu.classList.toggle("collapse");
+    }
+
     return (
-        <nav
-            className="navbar position-sticky top-0 start-0 py-3 navbar-expand-lg"
-            id="nav"
-        >
+        <nav className="navbar sticky-top py-3 navbar-expand-lg" id="nav">
             {/* Scosh's logo is not included */}
 
             <div className="container-fluid px-md-5 px-3">
                 <Link to="/" className="fw-normal navbar-brand ps-md-5">
-                    <span className="nav-brand">
-                        <img src={Scoshlogo} alt="Scosh 2021" />
+                    <span className="nav-brand text-white">
+                        <img src={scosh} alt="" />
                     </span>
                 </Link>
-                {/* <Link to="/contactpage" className="ms-auto">
-                    <button className="btn btn-outline-info text-info">Contact Me</button>
-                </Link> */}
+
                 <button
                     className="hamburger hamburger--collapse navbar-toggler mx-2"
                     type="button"
@@ -78,7 +75,7 @@ function Navbar() {
                     </span>
                 </button>
                 <div
-                    className="collapse navbar-collapse flex-grow-0 panel-body"
+                    className="collapse navbar-collapse flex-grow-0 panel-body navbarmenu"
                     id="collapseNav"
                 >
                     <div className="navbar-nav">

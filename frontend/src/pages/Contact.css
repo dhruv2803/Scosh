@@ -50,6 +50,15 @@
 }
 .contact_form > textarea {
     height: 150px;
+    width: 100%;
+    background-color: transparent;
+    font-family: "Exo 2", sans-serif;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 24px;
+    line-height: 29px;
+    letter-spacing: 0.005em;
+    padding: 10px 20px;
 }
 .contact_button {
     width: 227px;
@@ -99,9 +108,9 @@ textarea:-moz-placeholder {
     margin: auto;
 }
 .contact_otherMethod > p > img {
-    margin-top: 2px;
+    margin-top: 0px;
     position: relative;
-    top: 10px;
+    top: 0px;
 }
 
 @media (max-width: 992px) {

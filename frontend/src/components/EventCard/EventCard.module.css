@@ -1,8 +1,8 @@
 .root {
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     /* height: 400px; */
-    font-family: 'Inter', sans-serif;
-    color: #06053A;
+    font-family: "Inter", sans-serif;
+    color: #06053a;
     border-radius: 16px;
     overflow: hidden;
     margin-bottom: 50px;
@@ -22,7 +22,7 @@
     justify-content: space-between;
 }
 
-.cardContent > h1{
+.cardContent > h1 {
     font-size: 48px;
 }
 
@@ -32,23 +32,23 @@
 
 .registerBtn {
     background-color: white;
-    border: 2px solid #06053A;
+    border: 2px solid #06053a;
     margin-right: 12px;
     border-radius: 4px;
     padding: 4px 8px;
 }
 
 .moreBtn {
-    background-color: #06053A;
+    background-color: #06053a;
     color: white;
-    border: 2px solid #06053A;
+    border: 2px solid #06053a;
     border-radius: 4px;
     padding: 4px 8px;
 }
 
 .imgClass {
-    width: 400px;
-    height: 400px;
+    width: 100%;
+    height: fit-content;
     max-width: 400px;
     max-height: 400px;
     object-fit: cover;

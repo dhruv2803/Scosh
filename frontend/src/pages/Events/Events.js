@@ -15,7 +15,10 @@ export default function Events() {
     useEffect(() => {
         axios
             .get(constants.baseURL + "/events?page=" + page)
-            .then((res) => setEvents(res.data))
+            .then((res) => {
+                console.log(res.data);
+                setEvents(res.data);
+            })
             .catch((err) => console.error(err));
     }, []);
     useEffect(() => {
@@ -49,6 +52,7 @@ export default function Events() {
                                 body={event.description}
                                 img={event.image}
                                 registerLink={event.register}
+                                isOver={event.isOver}
                             />
                         ))}
                     </div>

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import EventCardCSS from "./EventCard.module.css";
 
 export default function EventCard(props) {
-    const { title, body, img, registerLink } = props;
+    const { title, body, img, registerLink, isOver } = props;
     const [read, setRead] = useState(false);
     return (
         <div className={EventCardCSS.root}>
@@ -25,14 +25,18 @@ export default function EventCard(props) {
                         </p>
                     </div>
                     <div className={EventCardCSS.actions}>
-                        <button
-                            className={EventCardCSS.registerBtn}
-                            onClick={() =>
-                                (window.location.href = registerLink)
-                            }
-                        >
-                            Register
-                        </button>
+                        {isOver ? (
+                            <></>
+                        ) : (
+                            <button
+                                className={EventCardCSS.registerBtn}
+                                onClick={() =>
+                                    (window.location.href = registerLink)
+                                }
+                            >
+                                Register
+                            </button>
+                        )}
                     </div>
                 </div>
             </div>

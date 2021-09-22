@@ -2,14 +2,37 @@ import React from "react";
 import "./Contact.css";
 import linkedin from "../images/linkedin.svg";
 import gmail from "../images/gmail.svg";
+import emailjs from "emailjs-com";
 const Contact = () => {
+    function sendEmail(e) {
+        console.log(e);
+        e.preventDefault();
+
+        emailjs
+            .sendForm(
+                "service_lxwssuu",
+                "template_n401l1d",
+                e.target,
+                "user_yvvqQsMVgSmWC5TiXj5Pm"
+            )
+            .then(
+                (result) => {
+                    console.log(result.text);
+                    e.target.reset();
+                },
+                (error) => {
+                    console.log(error.text);
+                }
+            );
+    }
+
     return (
         <div className="contact">
             <div className="contact_heading">LET’S GET TO KNOW EACH OTHER</div>
             <div className="contact_subheading">
                 Fill in the details below and let’s get this conversation going
             </div>
-            <form className="contact_form">
+            <form className="contact_form" onSubmit={sendEmail}>
                 <input type="text" name="name" id="name" placeholder="Name*" />
                 <input
                     type="text"
@@ -24,7 +47,7 @@ const Contact = () => {
                     placeholder="Email*"
                 />
                 <textarea
-                    className="msg"
+                    className="contact_msg"
                     placeholder="Your Message..."
                     name="msg"
                     id="msg"
@@ -35,13 +58,8 @@ const Contact = () => {
             <div className="contact_otherMethod">
                 <p>OR</p>
                 <p>
-                    Contact Us at:{" "}
-                    <a href=" https://www.linkedin.com/company/the-society-for-cultivation-of-science-and-humanities/mycompany/?viewAsMember=true">
-                        <img src={linkedin} alt="linked in" />
-                    </a>{" "}
-                    <a href="mailto:svnit.scosh@gmail.com">
-                        <img src={gmail} alt="gmail" />
-                    </a>
+                    Contact Us at: <img src={linkedin} alt="linked in" />{" "}
+                    <img src={gmail} alt="gmail" />
                 </p>
             </div>
         </div>

@@ -12,8 +12,10 @@ const Eventdetail = () => {
     useEffect(() => {
         axios
             .get(constants.baseURL + "/events/recent")
-            .then((res) => setBlogData(res.data))
-            .then((_) => console.log(blogData))
+            .then((res) => {
+                console.log({ data: res.data });
+                setBlogData(res.data);
+            })
             .then((_) => setLoading(false))
             .catch((err) => console.error(err));
     }, []);
