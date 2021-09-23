@@ -74,7 +74,11 @@ export default class Space extends React.Component {
     render() {
         const { num } = this.state;
         return (
-            <div className="container-fluid main-page" id="Space">
+            <div
+                className="container-fluid main-page"
+                style={{ width: "100%" }}
+                id="Space"
+            >
                 <div className="The-SVG container-fluid">
                     <Background />
                 </div>

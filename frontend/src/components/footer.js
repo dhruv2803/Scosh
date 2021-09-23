@@ -20,7 +20,8 @@ export default function Footer() {
                         <div className="col-12 col-lg-4 py-md-2 d-flex text-center locationS">
                             <i className="fas fa-map-marker-alt mx-2"></i>
                             <p className="location text-center mx-1">
-                                Sardar Vallabhai Institute Of Technology
+                                Sardar Vallabhbhai National Institute Of
+                                Technology
                             </p>
                         </div>
                         <div className="social-links col-12 col-lg-4 text-center">
