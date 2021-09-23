@@ -15,7 +15,10 @@ export default function Workshops() {
     useEffect(() => {
         axios
             .get(constants.baseURL + "/workshops?page=" + page)
-            .then((res) => setWorkshops(res.data))
+            .then((res) => {
+                console.log(res.data);
+                setWorkshops(res.data);
+            })
             .catch((err) => console.error(err));
     }, []);
     useEffect(() => {
@@ -49,6 +52,7 @@ export default function Workshops() {
                                 body={workshop.description}
                                 img={workshop.image}
                                 registerLink={workshop.register}
+                                isOver={workshop.isOver}
                             />
                         ))}
                     </div>
