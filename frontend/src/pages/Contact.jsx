@@ -10,7 +10,7 @@ const Contact = () => {
 
         emailjs
             .sendForm(
-                "service_lxwssuu",
+                "service_ik3nqql",
                 "template_n401l1d",
                 e.target,
                 "user_yvvqQsMVgSmWC5TiXj5Pm"
@@ -58,8 +58,13 @@ const Contact = () => {
             <div className="contact_otherMethod">
                 <p>OR</p>
                 <p>
-                    Contact Us at: <img src={linkedin} alt="linked in" />{" "}
-                    <img src={gmail} alt="gmail" />
+                    Contact Us at:{" "}
+                    <a href="https://www.instagram.com/scosh.svnit/?hl=en">
+                        <img src={linkedin} alt="linked in" />
+                    </a>{" "}
+                    <a href="mailto:svnit.scosh@gmail.com">
+                        <img src={gmail} alt="gmail" />
+                    </a>
                 </p>
             </div>
         </div>

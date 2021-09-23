@@ -26,7 +26,7 @@ const Card = ({ eventLink, blogId, size, clr, image, title, body }) => {
                 style={{
                     backgroundImage: `url(${image}) `,
                     backgroundRepeat: "no-repeat",
-                    backgroundPosition: "center",
+                    // backgroundPosition: "center",
                     backgroundSize: "cover",
                 }}
             ></div>
@@ -36,8 +36,10 @@ const Card = ({ eventLink, blogId, size, clr, image, title, body }) => {
                 </h3>
                 {/* <p className="card_description">{body.substring(0, 100)}</p> */}
                 <div
-                            dangerouslySetInnerHTML={{ __html: body.substring(0, 100) }}
-                        />
+                    dangerouslySetInnerHTML={{
+                        __html: body?.substring(0, 100),
+                    }}
+                />
             </div>
         </div>
     );

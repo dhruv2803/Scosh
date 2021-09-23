@@ -55,27 +55,27 @@ const Eventdetail = () => {
                                     clr={carddetails[0].clr}
                                     title={
                                         blogData[0]
-                                            ? blogData[0].title
+                                            ? blogData[0].name
                                             : carddetails[0].title
                                     }
-                                    body={
-                                        blogData[0]
-                                            ? blogData[0].body
-                                            : carddetails[0].body
-                                    }
+                                    body=""
                                     eventLink={
                                         blogData[0]
                                             ? blogData[0].register
                                             : "https://www.google.com"
                                     }
-                                    image="https://picsum.photos/200"
+                                    image={
+                                        blogData[0]
+                                            ? blogData[0].thumbnail?.url
+                                            : "https://picsum.photos/200"
+                                    }
                                 />
                                 <Card
                                     size={carddetails[0].size}
                                     clr="yellow"
                                     title={
                                         blogData[1]
-                                            ? blogData[1].title
+                                            ? blogData[1].name
                                             : carddetails[0].title
                                     }
                                     body={
@@ -88,7 +88,11 @@ const Eventdetail = () => {
                                             ? blogData[1].register
                                             : "https://www.google.com"
                                     }
-                                    image="https://picsum.photos/200"
+                                    image={
+                                        blogData[1]
+                                            ? blogData[1].thumbnail?.url
+                                            : "https://picsum.photos/200"
+                                    }
                                 />
                             </div>
                             <div className="blogs_cards">
@@ -97,7 +101,7 @@ const Eventdetail = () => {
                                     clr={carddetails[0].clr}
                                     title={
                                         blogData[2]
-                                            ? blogData[2].title
+                                            ? blogData[2].name
                                             : carddetails[0].title
                                     }
                                     body={
@@ -110,14 +114,18 @@ const Eventdetail = () => {
                                             ? blogData[2].register
                                             : "https://www.google.com"
                                     }
-                                    image="https://picsum.photos/200"
+                                    image={
+                                        blogData[2]
+                                            ? blogData[2].thumbnail?.url
+                                            : "https://picsum.photos/200"
+                                    }
                                 />
                                 <Card
                                     size={carddetails[0].size}
                                     clr="yellow"
                                     title={
                                         blogData[3]
-                                            ? blogData[3].title
+                                            ? blogData[3].name
                                             : carddetails[0].title
                                     }
                                     body={
@@ -130,7 +138,11 @@ const Eventdetail = () => {
                                             ? blogData[3].register
                                             : "https://www.google.com"
                                     }
-                                    image="https://picsum.photos/200"
+                                    image={
+                                        blogData[3]
+                                            ? blogData[3].thumbnail?.url
+                                            : "https://picsum.photos/200"
+                                    }
                                 />
                             </div>
                         </div>
